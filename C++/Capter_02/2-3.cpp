@@ -2,25 +2,25 @@
 
 using namespace std;
 
-void show1(void);
-void show2(void);
+void mice(void);
+void show(void);
 
-int main(void)
+int main()
 {
-	show1();
-	show1();
-	show2();
-	show2();
+	mice();
+	mice();
+	show();
+	show();
 
 	return 0;
 }
 
-void show1(void)
+void mice(void)
 {
 	cout << "Three blind mice" << endl;
 }
 
-void show2(void)
+void show(void)
 {
 	cout << "See how they run" << endl;
 }
