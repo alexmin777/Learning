@@ -13,11 +13,11 @@ int main()
 	string words;
 
 	cout << "Enter words (q to quit):" << endl;
-	while(cin.get(ch) && ch != 'q')
+	while(cin >> words && words != "q")
 	{
-		if (isalpha(ch))
+		if (isalpha(words[0]))
 		{
-			switch (ch)
+			switch (tolower(words[0]))
 			{
 				case 'a':
 				case 'e':
@@ -25,15 +25,11 @@ int main()
 				case 'o':
 				case 'u':
 					vowels++;
-					while (!isalpha(ch))
-						cin.get();
 					break;
 				default:
 					consonants++;
-					while (!isalpha(ch))
-						cin.get();
-					break;
 			}
+			cin.get();
 		}
 		else
 			others++;
